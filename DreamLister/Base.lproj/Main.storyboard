@@ -33,7 +33,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpw-fb-FiB">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="221-aJ-Ve6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="221-aJ-Ve6" customClass="ItemCell" customModule="DreamLister" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="221-aJ-Ve6" id="Wfy-wC-wdK">
@@ -42,7 +42,7 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjQ-JX-BHY">
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-WZ-WMr">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-WZ-WMr">
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="87" id="La0-Mz-DGX"/>
                                                                 <constraint firstAttribute="height" constant="78" id="jYp-ux-Wd8"/>
@@ -99,7 +99,12 @@
                                                 <constraint firstItem="YjQ-JX-BHY" firstAttribute="trailing" secondItem="Wfy-wC-wdK" secondAttribute="trailingMargin" id="hOj-3s-oFO"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="details" destination="lyb-2e-QbV" id="Sve-v4-Bbc"/>
+                                            <outlet property="price" destination="nr9-Dq-TY1" id="A8m-1L-5HT"/>
+                                            <outlet property="thumbnail" destination="zb9-WZ-WMr" id="ovj-GI-ff6"/>
+                                            <outlet property="title" destination="U2h-bi-8L0" id="0FJ-Aq-g8v"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -114,12 +119,19 @@
                             <constraint firstItem="Y1f-dU-N4R" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dRj-jB-TdF"/>
                             <constraint firstItem="wpw-fb-FiB" firstAttribute="top" secondItem="Y1f-dU-N4R" secondAttribute="bottom" constant="18" id="qlG-xs-ZTT"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="DreamLister" id="sRl-Zq-2iz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yRk-0a-jDH">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="Y1f-dU-N4R" id="MhU-8x-33Z"/>
+                        <outlet property="tableView" destination="wpw-fb-FiB" id="bJx-RU-AoC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,7 +142,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r5G-g0-xiH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="h6E-TO-ejQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h6E-TO-ejQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,4 +160,7 @@
             <point key="canvasLocation" x="168.80000000000001" y="791.15442278860576"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tesla" width="800" height="489"/>
+    </resources>
 </document>
