@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01CF83D1D8A190900FC8ABD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CF83C1D8A190900FC8ABD /* CustomTextField.swift */; };
 		E076D07B1D8A17AB008E2704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076D07A1D8A17AB008E2704 /* AppDelegate.swift */; };
 		E076D07D1D8A17AB008E2704 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076D07C1D8A17AB008E2704 /* ViewController.swift */; };
 		E076D0801D8A17AB008E2704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E076D07E1D8A17AB008E2704 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E01CF83C1D8A190900FC8ABD /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E076D0771D8A17AB008E2704 /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E076D07A1D8A17AB008E2704 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E076D07C1D8A17AB008E2704 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				E076D07A1D8A17AB008E2704 /* AppDelegate.swift */,
 				E076D07C1D8A17AB008E2704 /* ViewController.swift */,
+				E01CF83C1D8A190900FC8ABD /* CustomTextField.swift */,
 				E076D07E1D8A17AB008E2704 /* Main.storyboard */,
 				E076D0841D8A17AB008E2704 /* Assets.xcassets */,
 				E076D0861D8A17AB008E2704 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01CF83D1D8A190900FC8ABD /* CustomTextField.swift in Sources */,
 				E076D07D1D8A17AB008E2704 /* ViewController.swift in Sources */,
 				E076D07B1D8A17AB008E2704 /* AppDelegate.swift in Sources */,
 				E076D0831D8A17AB008E2704 /* DreamLister.xcdatamodeld in Sources */,
@@ -306,6 +310,7 @@
 				E076D08E1D8A17AB008E2704 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
