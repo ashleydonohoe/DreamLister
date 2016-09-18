@@ -144,7 +144,7 @@
         <!--Add/Edit-->
         <scene sceneID="Fte-TI-GM7">
             <objects>
-                <viewController id="eoE-Vq-ID7" sceneMemberID="viewController">
+                <viewController id="eoE-Vq-ID7" customClass="ItemDetailsVC" customModule="DreamLister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q9M-5U-ogK"/>
                         <viewControllerLayoutGuide type="bottom" id="Gsj-Fx-70N"/>
@@ -247,6 +247,12 @@
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailsField" destination="jgd-A7-uKq" id="PbF-qb-EWM"/>
+                        <outlet property="priceField" destination="SNd-9H-atx" id="zl6-Dy-c9p"/>
+                        <outlet property="storePicker" destination="CE6-z3-hlb" id="GFS-Wc-sAs"/>
+                        <outlet property="titleField" destination="9Gg-8g-YpU" id="Zga-Kp-d2P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNw-JZ-XW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,6 +266,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h6E-TO-ejQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
