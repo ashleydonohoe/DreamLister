@@ -65,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				E0022E5C1D8A2DB200F5ED58 /* MaterialView.swift */,
+				E01CF83C1D8A190900FC8ABD /* CustomTextField.swift */,
 				E0022E5E1D8A380200F5ED58 /* ItemCell.swift */,
 			);
 			name = View;
@@ -116,7 +117,6 @@
 				E0022E5B1D8A2D9800F5ED58 /* View */,
 				E01CF84E1D8A1C8300FC8ABD /* Model */,
 				E076D07A1D8A17AB008E2704 /* AppDelegate.swift */,
-				E01CF83C1D8A190900FC8ABD /* CustomTextField.swift */,
 				E076D07E1D8A17AB008E2704 /* Main.storyboard */,
 				E076D0841D8A17AB008E2704 /* Assets.xcassets */,
 				E076D0861D8A17AB008E2704 /* LaunchScreen.storyboard */,

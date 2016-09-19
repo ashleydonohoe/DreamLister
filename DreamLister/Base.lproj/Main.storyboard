@@ -164,6 +164,9 @@
                                     <constraint firstAttribute="width" constant="30" id="5dh-ss-8PQ"/>
                                     <constraint firstAttribute="height" constant="30" id="cZe-ms-kuI"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addPicture:" destination="eoE-Vq-ID7" eventType="touchUpInside" id="J7T-2D-gSA"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Gg-8g-YpU" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -248,12 +251,16 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="gqs-KP-wbO">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="eim-5r-T20">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deleteItem:" destination="eoE-Vq-ID7" id="mzq-sc-98P"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="jgd-A7-uKq" id="PbF-qb-EWM"/>
                         <outlet property="priceField" destination="SNd-9H-atx" id="zl6-Dy-c9p"/>
                         <outlet property="storePicker" destination="CE6-z3-hlb" id="GFS-Wc-sAs"/>
+                        <outlet property="thumbImage" destination="fmu-BE-HWO" id="F5y-kS-fic"/>
                         <outlet property="titleField" destination="9Gg-8g-YpU" id="Zga-Kp-d2P"/>
                     </connections>
                 </viewController>
