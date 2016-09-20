@@ -112,6 +112,10 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             item.details = details
         }
         
+        if let type = typeTextField.text {
+            item.type = type
+        }
+        
         item.toStore = stores[storePicker.selectedRow(inComponent: 0)]
         
         ad.saveContext()
@@ -149,6 +153,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             priceField.text = "\(item.price)"
             detailsField.text = item.details
             thumbImage.image = item.toImage?.image as? UIImage
+            typeTextField.text = item.type
             
             if let store = item.toStore {
                 var index = 0

@@ -150,24 +150,24 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.reloadData()
     }
     
-    func generateTestData() {
-        let item = Item(context: context)
-        item.title = "Macbook Pro"
-        item.price = 1800
-        item.details = "A beautiful computer"
-        
-        let item2 = Item(context: context)
-        item2.title = "iPad"
-        item2.price = 600
-        item2.details = "a lovely tablet"
-        
-        let item3 = Item(context: context)
-        item3.title = "iPod"
-        item3.price = 200
-        item3.details = "a lovely media player"
-        
-        ad.saveContext()
-    }
+//    func generateTestData() {
+//        let item = Item(context: context)
+//        item.title = "Macbook Pro"
+//        item.price = 1800
+//        item.details = "A beautiful computer"
+//        
+//        let item2 = Item(context: context)
+//        item2.title = "iPad"
+//        item2.price = 600
+//        item2.details = "a lovely tablet"
+//        
+//        let item3 = Item(context: context)
+//        item3.title = "iPod"
+//        item3.price = 200
+//        item3.details = "a lovely media player"
+//        
+//        ad.saveContext()
+//    }
 
 }
 
