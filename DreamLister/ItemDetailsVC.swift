@@ -16,6 +16,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     @IBOutlet weak var priceField: CustomTextField!
     @IBOutlet weak var detailsField: CustomTextField!
     @IBOutlet weak var thumbImage: UIImageView!
+    @IBOutlet weak var typeTextField: CustomTextField!
     
     var stores = [Store]()
     
@@ -38,6 +39,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             titleField.delegate = self
             priceField.delegate = self
             detailsField.delegate = self
+            typeTextField.delegate = self
             
             
             getStores()
