@@ -27,6 +27,7 @@
                                     <segment title="Newest"/>
                                     <segment title="Price"/>
                                     <segment title="Title"/>
+                                    <segment title="Type"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -70,9 +71,18 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description goes here" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyb-2e-QbV">
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="54" id="3cT-3G-cSx"/>
+                                                                <constraint firstAttribute="height" constant="35" id="3cT-3G-cSx"/>
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="54" id="HkF-3J-7mB"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="uC5-jy-MlA"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-0a-VMY">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="0mU-Qz-cbm"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4nK-vo-kwk"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,13 +91,16 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="dN1-0a-VMY" secondAttribute="bottom" constant="8" id="5m0-qS-b17"/>
                                                         <constraint firstAttribute="trailing" secondItem="lyb-2e-QbV" secondAttribute="trailing" constant="8" id="7Rz-UN-w0T"/>
                                                         <constraint firstItem="nr9-Dq-TY1" firstAttribute="top" secondItem="U2h-bi-8L0" secondAttribute="bottom" constant="2" id="B5U-LR-Jac"/>
+                                                        <constraint firstItem="dN1-0a-VMY" firstAttribute="top" secondItem="lyb-2e-QbV" secondAttribute="bottom" id="E3X-gw-JdG"/>
                                                         <constraint firstAttribute="trailing" secondItem="nr9-Dq-TY1" secondAttribute="trailing" constant="8" id="Fbz-wY-prX"/>
                                                         <constraint firstItem="nr9-Dq-TY1" firstAttribute="leading" secondItem="zb9-WZ-WMr" secondAttribute="trailing" constant="8" id="Lkp-1t-xEH"/>
                                                         <constraint firstItem="zb9-WZ-WMr" firstAttribute="centerY" secondItem="YjQ-JX-BHY" secondAttribute="centerY" id="OTu-Fj-9gs"/>
                                                         <constraint firstItem="zb9-WZ-WMr" firstAttribute="leading" secondItem="YjQ-JX-BHY" secondAttribute="leading" constant="8" id="Ohn-0k-0Wv"/>
                                                         <constraint firstItem="lyb-2e-QbV" firstAttribute="leading" secondItem="zb9-WZ-WMr" secondAttribute="trailing" constant="8" id="WWf-Sa-NoO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dN1-0a-VMY" secondAttribute="trailing" constant="8" id="d06-LV-oHd"/>
                                                         <constraint firstAttribute="trailing" secondItem="U2h-bi-8L0" secondAttribute="trailing" constant="8" id="dk4-4v-VbB"/>
                                                         <constraint firstItem="U2h-bi-8L0" firstAttribute="top" secondItem="YjQ-JX-BHY" secondAttribute="top" constant="8" id="ov7-Z1-8If"/>
                                                         <constraint firstItem="lyb-2e-QbV" firstAttribute="top" secondItem="U2h-bi-8L0" secondAttribute="bottom" constant="22" id="qfy-PG-gEH"/>
@@ -104,6 +117,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="details" destination="lyb-2e-QbV" id="Sve-v4-Bbc"/>
+                                            <outlet property="itemType" destination="dN1-0a-VMY" id="YFO-Vx-P0U"/>
                                             <outlet property="price" destination="nr9-Dq-TY1" id="A8m-1L-5HT"/>
                                             <outlet property="thumbnail" destination="zb9-WZ-WMr" id="ovj-GI-ff6"/>
                                             <outlet property="title" destination="U2h-bi-8L0" id="0FJ-Aq-g8v"/>
