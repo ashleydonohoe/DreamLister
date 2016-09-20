@@ -85,11 +85,18 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         var item: Item!
         
+        let picture = Image(context: context)
+        picture.image = thumbImage.image
+        
+    
+        
         if itemToEdit == nil {
             item = Item(context: context)
         } else {
             item = itemToEdit
         }
+        
+        item.toImage = picture
         
         if let title = titleField.text {
             item.title = title
@@ -130,6 +137,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             thumbImage.image = image
         }
+        
+        imagePicker.dismiss(animated: true, completion: nil)
     }
     
     func loadItemData() {
@@ -137,6 +146,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             titleField.text = item.title
             priceField.text = "\(item.price)"
             detailsField.text = item.details
+            thumbImage.image = item.toImage?.image as? UIImage
             
             if let store = item.toStore {
                 var index = 0
